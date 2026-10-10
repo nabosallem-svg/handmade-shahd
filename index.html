@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f2ec">
+<title>AURA | منتجات هاند ميد</title>
+<meta name="description" content="منتجات هاند ميد مصنوعة بحب، واطلب تصميمك الخاص عبر واتساب.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AURA · More than accessories">
+<meta property="og:title" content="AURA | منتجات هاند ميد">
+<meta property="og:description" content="YOUR STYLE, YOUR AURA ✦ Handmade accessories with a soft, luxurious touch. Order online, pay with InstaPay or Vodafone Cash, delivered to your door.">
+<meta property="og:image" content="https://aura-store-murex.vercel.app/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body data-page="home">
+<header class="site-header" id="site-header"></header>
+<main>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">✦ معمول يدوياً</span>
+      <h1>ستايلك، هالتك<span class="en">Your style, your aura</span></h1>
+      <p class="sub">أكتر من مجرد إكسسوارات<span class="en"> · More than accessories</span></p>
+      <p class="lead">إكسسوارات هاند ميد بلمسة ناعمة وفخمة. كل قطعة معمولة بإيد، ومفيش قطعتين زي بعض بالظبط. اختاري من القطع الجاهزة، أو احكيلنا فكرتك ونعملهالك مخصوص.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#catalog">تصفح المنتجات</a>
+        <a class="btn ghost" href="custom-order.html">اطلب تصميم خاص</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-main" id="hero-img"></div>
+      <div class="hero-small" id="hero-img-small"></div>
+      <span class="hero-badge">✦ قطعة واحدة من نوعها</span>
+      <span class="sparkle" style="top:-4%;inset-inline-start:8%;font-size:1.6rem">✦</span>
+      <span class="sparkle" style="bottom:20%;inset-inline-end:-8%;animation-delay:1s">✧</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>تسوقي حسب القسم<span class="en">Shop by category</span></h2></div>
+    <div class="cats reveal" id="cats"></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>الأكثر طلباً<span class="en">Best sellers</span></h2><a class="btn ghost" href="#catalog">شوفي الكل</a></div>
+    <div class="grid reveal" id="bestsellers"></div>
+    <div class="perks-row reveal">
+      <div class="perk"><i>✦</i><strong>معمول بإيد</strong><span>كل قطعة بتتعمل بعناية</span></div>
+      <div class="perk"><i>✧</i><strong>على مزاجك</strong><span>ألوان وأسماء ومقاسات</span></div>
+      <div class="perk"><i>✦</i><strong>دفع سهل</strong><span>إنستا باي أو فودافون كاش</span></div>
+      <div class="perk"><i>✧</i><strong>تغليف هدية</strong><span>جاهزة تتقدم على طول</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="gift reveal">
+      <div class="gift-media" id="gift-img"></div>
+      <div class="gift-body">
+        <span class="eyebrow">✦ Gift wrapping</span>
+        <h2>كل طلب بيوصل كأنه هدية</h2>
+        <p class="muted">بنغلف كل قطعة بعناية في علبتها مع شريطة، ولو الطلب هدية اكتبيلنا رسالة الكارت وإحنا نكتبها ونبعتها على عنوان اللي بتحبيها.</p>
+        <a class="btn" href="custom-order.html">اطلبي تصميم خاص</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="catalog" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>كل المنتجات<span class="en">All products</span></h2></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="catalog-grid"></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script src="js/motion.js"></script>
+</body>
+</html>

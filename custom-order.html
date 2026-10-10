@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f2ec">
+<title>تصميم خاص | AURA</title>
+<meta name="description" content="منتجات هاند ميد مصنوعة بحب، واطلب تصميمك الخاص عبر واتساب.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AURA · More than accessories">
+<meta property="og:title" content="تصميم خاص | AURA">
+<meta property="og:description" content="YOUR STYLE, YOUR AURA ✦ Handmade accessories with a soft, luxurious touch. Order online, pay with InstaPay or Vodafone Cash, delivered to your door.">
+<meta property="og:image" content="https://aura-store-murex.vercel.app/images/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body data-page="custom">
+<header class="site-header" id="site-header"></header>
+<main>
+
+<section class="page"><div class="wrap custom-grid">
+  <div class="custom-media" id="custom-img"></div>
+  <div>
+    <span class="eyebrow">✦ Custom design</span>
+    <h1 class="page-title" style="margin-bottom:12px">اطلبي تصميمك الخاص</h1>
+    <p class="muted">احكيلنا عايزة إيه بالظبط (الألوان، المقاس، الاسم...) ولو عندك صورة للفكرة ضيفيها. بعد ما تبعتي هيفتحلك واتساب بالتفاصيل جاهزة، ونتفق على كل حاجة والسعر.</p>
+    <form class="form-card" id="custom-form">
+      <label class="field"><span>الاسم</span><input name="name" required autocomplete="name"></label>
+      <label class="field"><span>رقم الموبايل / واتساب</span><input name="phone" required inputmode="tel" autocomplete="tel" dir="ltr"></label>
+      <label class="field"><span>نوع القطعة</span><select name="type" id="c-type"></select></label>
+      <label class="field"><span>احكيلنا فكرتك</span><textarea name="idea" id="c-idea" rows="5" maxlength="2000" required placeholder="مثلاً: إسوارة خرز بينك ولولي، عليها اسم «ملك»، مقاس إيد صغيرة"></textarea></label>
+      <div class="counter" id="c-count">0 / 2000</div>
+      <label class="field"><span>صورة مرجعية (اختياري) · JPG, PNG, WEBP</span><input type="file" id="c-file" accept="image/jpeg,image/png,image/webp"></label>
+      <img id="c-preview" alt="معاينة الصورة" hidden>
+      <button class="btn block" type="submit">ابعتي الطلب</button>
+    </form>
+    <div class="form-card" id="custom-done" hidden>
+      <h2>طلبك وصل ✦</h2>
+      <p>رقم الطلب: <strong id="custom-id" dir="ltr"></strong></p>
+      <p class="muted">ابعتي رسالة الواتساب عشان نتكلم في التفاصيل، ولو عندك صورة ابعتيها في نفس الشات.</p>
+      <a class="btn" id="custom-wa" target="_blank" rel="noopener">افتحي واتساب</a>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script src="js/motion.js"></script>
+</body>
+</html>
