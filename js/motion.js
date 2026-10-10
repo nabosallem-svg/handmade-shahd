@@ -27,8 +27,8 @@
       return '<span style="--i:' + i + '">' + c + '</span>';
     }).join('') + '<i>✦</i></div><div class="loader-line"></div>';
     document.body.appendChild(loader);
-    setTimeout(function () { loader.classList.add('out'); }, 1300);
-    setTimeout(function () { loader.remove(); }, 2200);
+    setTimeout(function () { loader.classList.add('out'); }, 900);
+    setTimeout(function () { loader.remove(); }, 1700);
     root.classList.add('intro-delay');
   }
   requestAnimationFrame(function () { document.body.classList.add('loaded'); });
@@ -64,7 +64,7 @@
     var field = document.createElement('div');
     field.className = 'sparkle-field';
     field.setAttribute('aria-hidden', 'true');
-    for (var k = 0; k < 18; k++) {
+    for (var k = 0; k < 10; k++) {
       var sp = document.createElement('span');
       sp.textContent = Math.random() > .5 ? '✦' : '✧';
       sp.style.left = (Math.random() * 100) + '%';
@@ -148,21 +148,6 @@
         heroArt.style.setProperty('--my', '0px');
       });
     }
-
-    // sparkle trail behind the cursor
-    var last = 0;
-    addEventListener('mousemove', function (e) {
-      var now = performance.now();
-      if (now - last < 70) return;
-      last = now;
-      var s = document.createElement('span');
-      s.className = 'trail';
-      s.textContent = Math.random() > .5 ? '✦' : '✧';
-      s.style.left = e.clientX + 'px';
-      s.style.top = e.clientY + 'px';
-      document.body.appendChild(s);
-      setTimeout(function () { s.remove(); }, 900);
-    }, { passive: true });
   }
 
   // cards: 3D tilt + light
@@ -170,7 +155,10 @@
     if (!finePointer) return;
     $$('.card:not([data-tilt]), .cat:not([data-tilt])', scope).forEach(function (card) {
       card.setAttribute('data-tilt', '');
+      var raf = 0;
       card.addEventListener('mousemove', function (e) {
+        if (raf) return;
+        raf = requestAnimationFrame(function () { raf = 0; });
         var r = card.getBoundingClientRect();
         var x = (e.clientX - r.left) / r.width;
         var y = (e.clientY - r.top) / r.height;
@@ -273,7 +261,7 @@
     if (!/\.html$|\/$/.test(url.pathname)) return;
     e.preventDefault();
     document.body.classList.add('leaving');
-    setTimeout(function () { location.href = a.href; }, 280);
+    setTimeout(function () { location.href = a.href; }, 120);
   });
   addEventListener('pageshow', function (e) { if (e.persisted) document.body.classList.remove('leaving'); });
 

@@ -127,8 +127,8 @@
   }
 
   // ---------- shared pieces ----------
-  function img(id, w, alt, cls) {
-    return '<img src="' + IMG(id, w) + '" alt="' + esc(alt) + '" loading="lazy" decoding="async"' +
+  function img(id, w, alt, cls, eager) {
+    return '<img src="' + IMG(id, w) + '" alt="' + esc(alt) + '"' + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async"' +
       (cls ? ' class="' + cls + '"' : '') + ' onerror="this.classList.add(\'img-fallback\')">';
   }
 
@@ -164,8 +164,8 @@
   var pages = {};
 
   pages.home = function () {
-    $('#hero-img').innerHTML = img(SITE_IMAGES.hero, 1400, 'إيد بتشتغل على قطعة إكسسوار هاند ميد');
-    $('#hero-img-small').innerHTML = img(SITE_IMAGES.heroSmall, 600, 'طقم لولي بينك');
+    $('#hero-img').innerHTML = img(SITE_IMAGES.hero, 1400, 'شنطة كريستال بينك بفيونكة', '', true);
+    $('#hero-img-small').innerHTML = img(SITE_IMAGES.heroSmall, 600, 'تعليقة وردة لولي', '', true);
     $('#gift-img').innerHTML = img(SITE_IMAGES.gift, 1100, 'علب هدايا بشريطة بينك');
 
     $('#cats').innerHTML = CATEGORIES.map(function (c) {
