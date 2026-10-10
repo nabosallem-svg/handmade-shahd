@@ -7,7 +7,7 @@ window.STORE = {
   madeBy: 'نبيه',
 
   // رقم الواتساب بالصيغة الدولية من غير + (مثال: 201012345678)
-  whatsapp: '201000000000',
+  whatsapp: '201285537109',
 
   // بيانات الدفع اللي بتظهر للعميلة بعد الطلب
   instapay: 'aura@instapay',
@@ -21,7 +21,7 @@ window.STORE = {
 };
 
 /*
- * صور الموقع. كلها من Unsplash (مسموح استخدامها مجاناً).
+ * صور الموقع. اللي بتبدأ بـ images/ صور منتجاتك، والباقي من Unsplash (مسموح استخدامها مجاناً).
  * عشان تغير صورة، حط لينك تاني أو مسار صورة جوه فولدر images/ (مثال: 'images/hero.jpg').
  */
 window.IMG = function (id, w) {
@@ -30,10 +30,10 @@ window.IMG = function (id, w) {
 };
 
 window.SITE_IMAGES = {
-  hero: 'photo-1715374033196-0ff662284a7e',        // إيد بتشتغل على قطعة إكسسوار
-  heroSmall: 'photo-1654699991494-892326ee8171',   // طقم لولي بينك
+  hero: 'images/products/pink-crystal-bow-bag.jpg', // شنطة كريستال بينك بفيونكة
+  heroSmall: 'images/products/pearl-flower-keychains.jpg', // ميداليات وردة لولي
   gift: 'photo-1625552186152-668cd2f0b707',        // علب هدايا بشريطة بينك وورد مجفف
   aboutMain: 'photo-1599071338288-49173359e0fd',   // إيد شايلة علبة خشب
-  aboutSide: 'photo-1679590988898-50c20140aec0',   // أساور معروضة على ستاند خشب
+  aboutSide: 'images/products/pearl-bag-classic.jpg', // شنطة لولي كلاسيك
   custom: 'photo-1659032882718-3e54e7da86ab',      // ترابيزة شغل عليها خامات
 };
