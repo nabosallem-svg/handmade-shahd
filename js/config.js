@@ -21,19 +21,17 @@ window.STORE = {
 };
 
 /*
- * صور الموقع. اللي بتبدأ بـ images/ صور منتجاتك، والباقي من Unsplash (مسموح استخدامها مجاناً).
- * عشان تغير صورة، حط لينك تاني أو مسار صورة جوه فولدر images/ (مثال: 'images/hero.jpg').
+ * صور الموقع. عشان تغير صورة، حط الصورة جوه فولدر images/ واكتب مسارها هنا.
  */
-window.IMG = function (id, w) {
-  if (id.indexOf('/') !== -1) return id; // مسار محلي أو لينك كامل
-  return 'https://images.unsplash.com/' + id + '?auto=format&fit=crop&w=' + (w || 900) + '&q=80';
+window.IMG = function (path) {
+  return path;
 };
 
 window.SITE_IMAGES = {
   hero: 'images/products/pink-crystal-bow-bag.jpg', // شنطة كريستال بينك بفيونكة
-  heroSmall: 'images/products/pearl-flower-keychains.jpg', // ميداليات وردة لولي
-  gift: 'photo-1625552186152-668cd2f0b707',        // علب هدايا بشريطة بينك وورد مجفف
-  aboutMain: 'photo-1599071338288-49173359e0fd',   // إيد شايلة علبة خشب
+  heroSmall: 'images/products/pearl-flower-charm.jpg', // تعليقة وردة لولي
+  gift: 'images/products/pearl-flower-keychains.jpg', // ميداليات توزيعات بكروت
+  aboutMain: 'images/products/pearl-bow-mini-bag.jpg', // شنطة لولي ميني بفيونكة
   aboutSide: 'images/products/pearl-bag-classic.jpg', // شنطة لولي كلاسيك
-  custom: 'photo-1659032882718-3e54e7da86ab',      // ترابيزة شغل عليها خامات
+  custom: 'images/products/pearl-pocket-mirrors.jpg', // مرايات جيب لولي وخامات الشغل
 };
