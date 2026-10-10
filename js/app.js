@@ -154,6 +154,8 @@
       var b = e.target.closest('[data-add]');
       if (!b) return;
       Cart.add(b.dataset.add, 1);
+      var card = b.closest('.card');
+      document.dispatchEvent(new CustomEvent('aura:add', { detail: { from: card && card.querySelector('.card-media img') } }));
       toast('اتضافت للسلة ✦');
     });
   }
@@ -243,6 +245,7 @@
     $('#add').addEventListener('click', function () {
       var note = $('#note') ? $('#note').value.trim() : '';
       Cart.add(p.id, qty, note);
+      document.dispatchEvent(new CustomEvent('aura:add', { detail: { from: $('#g-main img') } }));
       toast('اتضافت للسلة ✦');
     });
 
@@ -411,13 +414,4 @@
   var page = document.body.dataset.page;
   if (pages[page]) pages[page]();
 
-  // reveal on scroll
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-  } else {
-    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
-  }
 })();
